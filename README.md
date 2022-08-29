@@ -1,4 +1,4 @@
-# ERPNext-Frepple Integration
+# ERPNext-Frepple Enhanced Integration
 <a href="https://github.com/msf4-0/ERPNext-Frepple-Integration/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/msf4-0/ERPNext-Frepple-Integration.svg?color=blue">
 </a>
