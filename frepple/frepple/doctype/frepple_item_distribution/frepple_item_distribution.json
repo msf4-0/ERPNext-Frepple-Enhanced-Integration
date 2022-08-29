@@ -1,0 +1,218 @@
+{
+ "autoname": "format:{item} From {origin} To {destination}",
+ "creation": "2022-01-26 13:24:51.311280",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "section_break_2",
+  "origin",
+  "column_break_31",
+  "destination",
+  "section_break_5",
+  "sizemin_fepple_distribution",
+  "sizemulti_fepple_distribution",
+  "column_break_32",
+  "sizemax_fepple_distribution",
+  "lead_time_section",
+  "day",
+  "column_break_6",
+  "time",
+  "batch_win_section",
+  "day1",
+  "column_break12",
+  "time1",
+  "section_break_13",
+  "resource",
+  "column_break_33",
+  "resource_quantity",
+  "additional_information_section",
+  "effetive_start_datetime",
+  "prority",
+  "column_break_11",
+  "effective_end_datetime"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Frepple Item",
+   "reqd": 1
+  },
+  {
+   "description": "Depart from where",
+   "fieldname": "origin",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Origin",
+   "options": "Frepple Location",
+   "reqd": 1
+  },
+  {
+   "description": "If left empty, any location can be used as destination",
+   "fieldname": "destination",
+   "fieldtype": "Link",
+   "label": "Destination",
+   "options": "Frepple Location"
+  },
+  {
+   "description": "Duration for item transfer",
+   "fieldname": "lead_time_section",
+   "fieldtype": "Section Break",
+   "label": "Lead time"
+  },
+  {
+   "default": "0",
+   "fieldname": "day",
+   "fieldtype": "Int",
+   "label": "Day"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional information"
+  },
+  {
+   "default": "1970:1:1 00:00:00",
+   "fieldname": "effetive_start_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Effective Start Datetime",
+   "reqd": 1
+  },
+  {
+   "default": "2030:1:1 00:00:00",
+   "fieldname": "effective_end_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Effective End Datetime",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "description": "Priority among all alternates.",
+   "fieldname": "prority",
+   "fieldtype": "Int",
+   "label": "Prority"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Resource to model the distribution capacity",
+   "fieldname": "resource",
+   "fieldtype": "Link",
+   "label": "Resource",
+   "options": "Frepple Resource"
+  },
+  {
+   "default": "1",
+   "description": "A minimum shipping quantity",
+   "fieldname": "sizemin_fepple_distribution",
+   "fieldtype": "Float",
+   "label": "Size Minimum"
+  },
+  {
+   "default": "1",
+   "description": "A multiple shipping quantity",
+   "fieldname": "sizemulti_fepple_distribution",
+   "fieldtype": "Float",
+   "label": "Size Multiple"
+  },
+  {
+   "description": "Proposed distribution orders within this window will be grouped together",
+   "fieldname": "batch_win_section",
+   "fieldtype": "Section Break",
+   "label": "Batching window"
+  },
+  {
+   "default": "0",
+   "fieldname": "day1",
+   "fieldtype": "Int",
+   "label": "Day"
+  },
+  {
+   "fieldname": "column_break12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "time1",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "resource_quantity",
+   "fieldtype": "Int",
+   "label": "Resource Quantity"
+  },
+  {
+   "description": "A maximum shipping quantity",
+   "fieldname": "sizemax_fepple_distribution",
+   "fieldtype": "Float",
+   "label": "Size Maximum",
+   "default": "1"
+  }
+ ],
+ "modified": "2022-07-08 15:23:38.983096",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Item Distribution",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

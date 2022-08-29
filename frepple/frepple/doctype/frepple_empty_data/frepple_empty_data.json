@@ -1,0 +1,257 @@
+{
+ "creation": "2022-07-21 14:30:41.270265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "section_break_10",
+  "deselect_all",
+  "select_all",
+  "delete_data",
+  "frepple_result_section",
+  "frepple_manufacturing_order",
+  "frepple_purchase_order",
+  "frepple_distribution_order",
+  "frepple_demand_section",
+  "frepple_demand",
+  "frepple_sales_section",
+  "frepple_item",
+  "frepple_customer",
+  "frepple_location",
+  "frepple_inventory_section",
+  "frepple_buffer",
+  "frepple_item_distribution",
+  "frepple_capacity_section",
+  "frepple_resource",
+  "frepple_skill",
+  "frepple_resource_skill",
+  "frepple_purchasing_section",
+  "frepple_supplier",
+  "frepple_item_supplier",
+  "frepple_manufacturing_section",
+  "frepple_operation",
+  "frepple_operation_material",
+  "frepple_operation_resource",
+  "frepple_additional_data_section",
+  "frepple_calendar",
+  "frepple_calendar_bucket",
+  "notice_calendar"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Heading",
+   "label": "Tick on the following checkbox to choose the data to be deleted"
+  },
+  {
+   "fieldname": "frepple_sales_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Sales"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item",
+   "fieldtype": "Check",
+   "label": "Frepple Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_customer",
+   "fieldtype": "Check",
+   "label": "Frepple Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_location",
+   "fieldtype": "Check",
+   "label": "Frepple Location"
+  },
+  {
+   "fieldname": "frepple_inventory_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Inventory"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_buffer",
+   "fieldtype": "Check",
+   "label": "Frepple Buffer"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item_distribution",
+   "fieldtype": "Check",
+   "label": "Frepple Item Distribution"
+  },
+  {
+   "fieldname": "frepple_capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Capacity"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_resource",
+   "fieldtype": "Check",
+   "label": " Frepple Resource"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_skill",
+   "fieldtype": "Check",
+   "label": " Frepple Skill"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_resource_skill",
+   "fieldtype": "Check",
+   "label": " Frepple Resource Skill"
+  },
+  {
+   "fieldname": "frepple_purchasing_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Purchasing"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_supplier",
+   "fieldtype": "Check",
+   "label": "Frepple Supplier"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item_supplier",
+   "fieldtype": "Check",
+   "label": "Frepple Item Supplier"
+  },
+  {
+   "fieldname": "frepple_manufacturing_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Manufacturing"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation",
+   "fieldtype": "Check",
+   "label": " Frepple Operation"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation_material",
+   "fieldtype": "Check",
+   "label": "Frepple Operation Material"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation_resource",
+   "fieldtype": "Check",
+   "label": "Frepple Operation Resource"
+  },
+  {
+   "fieldname": "frepple_additional_data_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Additional Data",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_calendar",
+   "fieldtype": "Check",
+   "label": "Frepple Calendar"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_calendar_bucket",
+   "fieldtype": "Check",
+   "label": "Frepple Calendar Bucket"
+  },
+  {
+   "bold": 1,
+   "fieldname": "frepple_demand_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Demand"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "frepple_demand",
+   "fieldtype": "Check",
+   "label": "Frepple Demand"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deselect_all",
+   "fieldtype": "Button",
+   "label": "Deselect All"
+  },
+  {
+   "fieldname": "select_all",
+   "fieldtype": "Button",
+   "label": "Select All"
+  },
+  {
+   "fieldname": "delete_data",
+   "fieldtype": "Button",
+   "label": "Delete Selected Data"
+  },
+  {
+   "bold": 1,
+   "fieldname": "frepple_result_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Result"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "frepple_purchase_order",
+   "fieldtype": "Check",
+   "label": "Frepple Purchase Order"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "frepple_distribution_order",
+   "fieldtype": "Check",
+   "label": "Frepple Distribution Order"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "frepple_manufacturing_order",
+   "fieldtype": "Check",
+   "label": "Frepple Manufacturing Order"
+  },
+  {
+   "depends_on": "eval:(doc.frepple_calendar==1)",
+   "fieldname": "notice_calendar",
+   "fieldtype": "HTML",
+   "label": "Notice",
+   "options": "Frepple Calendar Bucket must be deleted in order to delete Frepple Calendar",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "modified": "2022-07-25 19:08:00.345459",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Empty Data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

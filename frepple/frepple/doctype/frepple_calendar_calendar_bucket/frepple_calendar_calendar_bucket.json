@@ -1,0 +1,139 @@
+{
+ "creation": "2022-01-26 12:43:22.217859",
+ "description": "A calendar bucket represents a time period on a calendar during which a certain numeric value is effective.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "calendar_bucket",
+  "date_section",
+  "start_datetime",
+  "column_break_4",
+  "end_datetime",
+  "section_break_6",
+  "start_time",
+  "end_time",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_section",
+   "fieldtype": "Section Break",
+   "label": "Date"
+  },
+  {
+   "default": "1970:1:1 00:00:00",
+   "description": "Effective calendar starting date",
+   "fetch_from": "calendar_bucket.start_datetime",
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2030:1:1 00:00:00",
+   "description": "Effective calendar ending date",
+   "fetch_from": "calendar_bucket.end_datetime",
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Repeating pattern"
+  },
+  {
+   "fetch_from": "calendar_bucket.start_time",
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fetch_from": "calendar_bucket.end_time",
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "default": "1",
+   "fetch_from": "calendar_bucket.monday",
+   "fieldname": "monday",
+   "fieldtype": "Check",
+   "label": "Monday"
+  },
+  {
+   "default": "1",
+   "fetch_from": "calendar_bucket.tuesday",
+   "fieldname": "tuesday",
+   "fieldtype": "Check",
+   "label": "Tuesday"
+  },
+  {
+   "default": "1",
+   "fetch_from": "calendar_bucket.wednesday",
+   "fieldname": "wednesday",
+   "fieldtype": "Check",
+   "label": "Wednesday"
+  },
+  {
+   "default": "1",
+   "fetch_from": "calendar_bucket.thursday",
+   "fieldname": "thursday",
+   "fieldtype": "Check",
+   "label": "Thursday"
+  },
+  {
+   "default": "1",
+   "fetch_from": "calendar_bucket.friday",
+   "fieldname": "friday",
+   "fieldtype": "Check",
+   "label": "Friday"
+  },
+  {
+   "default": "0",
+   "fetch_from": "calendar_bucket.saturday",
+   "fieldname": "saturday",
+   "fieldtype": "Check",
+   "label": "Saturday"
+  },
+  {
+   "default": "0",
+   "fetch_from": "calendar_bucket.sunday",
+   "fieldname": "sunday",
+   "fieldtype": "Check",
+   "label": "Sunday"
+  },
+  {
+   "fieldname": "calendar_bucket",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Calendar Bucket",
+   "options": "Frepple Calendar Bucket",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2022-01-27 10:54:29.302704",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Calendar Calendar Bucket",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

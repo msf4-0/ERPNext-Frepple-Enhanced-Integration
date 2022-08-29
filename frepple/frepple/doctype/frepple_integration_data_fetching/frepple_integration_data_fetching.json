@@ -1,0 +1,276 @@
+{
+ "creation": "2022-01-26 16:52:32.954690",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "section_break_10",
+  "small_text_1",
+  "deselect_all",
+  "select_all",
+  "get_data_for_frepple",
+  "column_break_1",
+  "small_text_27",
+  "frepple_demand_section",
+  "frepple_demand",
+  "frepple_sales_section",
+  "frepple_item",
+  "frepple_customer",
+  "frepple_location",
+  "frepple_inventory_section",
+  "frepple_buffer",
+  "frepple_item_distribution",
+  "frepple_capacity_section",
+  "frepple_resource",
+  "frepple_skill",
+  "frepple_resource_skill",
+  "frepple_purchasing_section",
+  "frepple_supplier",
+  "frepple_item_supplier",
+  "frepple_manufacturing_section",
+  "frepple_operation",
+  "frepple_operation_material",
+  "frepple_operation_resource",
+  "frepple_additional_data_section",
+  "frepple_calendar",
+  "frepple_calendar_bucket",
+  "rule",
+  "fetching_rule_1",
+  "column_break_3",
+  "fetching_rule_2"
+ ],
+ "fields": [
+  {
+   "description": "  ",
+   "fieldname": "get_data_for_frepple",
+   "fieldtype": "Button",
+   "label": "Get Data for Frepple"
+  },
+  {
+   "fieldname": "frepple_sales_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Sales"
+  },
+  {
+   "fieldname": "frepple_capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Capacity"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_resource",
+   "fieldtype": "Check",
+   "label": " Frepple Resource"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_skill",
+   "fieldtype": "Check",
+   "label": " Frepple Skill"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_resource_skill",
+   "fieldtype": "Check",
+   "label": " Frepple Resource Skill"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation",
+   "fieldtype": "Check",
+   "label": " Frepple Operation"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "frepple_inventory_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Inventory"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item_distribution",
+   "fieldtype": "Check",
+   "label": "Frepple Item Distribution",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item",
+   "fieldtype": "Check",
+   "label": "Frepple Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_customer",
+   "fieldtype": "Check",
+   "label": "Frepple Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_location",
+   "fieldtype": "Check",
+   "label": "Frepple Location"
+  },
+  {
+   "description": "See the fetching rules bellow to ensure which data can be fetched",
+   "fieldname": "section_break_1",
+   "fieldtype": "Heading",
+   "label": "Tick on the following checkbox to choose the data to be fetched from EPRNext to Frepple Integration"
+  },
+  {
+   "fieldname": "frepple_manufacturing_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Manufacturing"
+  },
+  {
+   "fieldname": "frepple_purchasing_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Purchasing"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_supplier",
+   "fieldtype": "Check",
+   "label": "Frepple Supplier"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_item_supplier",
+   "fieldtype": "Check",
+   "label": "Frepple Item Supplier",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation_material",
+   "fieldtype": "Check",
+   "label": "Frepple Operation Material"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_operation_resource",
+   "fieldtype": "Check",
+   "label": "Frepple Operation Resource"
+  },
+  {
+   "fieldname": "select_all",
+   "fieldtype": "Button",
+   "label": "Select All"
+  },
+  {
+   "fieldname": "deselect_all",
+   "fieldtype": "Button",
+   "label": "Deselect All"
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_buffer",
+   "fieldtype": "Check",
+   "label": "Frepple Buffer"
+  },
+  {
+   "fieldname": "frepple_additional_data_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Additional Data",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_calendar",
+   "fieldtype": "Check",
+   "label": "Frepple Calendar",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frepple_calendar_bucket",
+   "fieldtype": "Check",
+   "label": "Frepple Calendar Bucket",
+   "read_only": 1
+  },
+  {
+   "default": "Import data do not include the following field:\n<br>\n1. Calendar\n<br>\n2. Calendar bucket\n<br>\n3. Item distribution\n<br>\n4. Item supplier\n<br>\nCreate the field on your own to ensure the Frepple Planning Algorithm is fully configured.",
+   "fieldname": "small_text_27",
+   "fieldtype": "HTML",
+   "label": "Notice",
+   "options": "Import data do not include the following field:\n<br>\n1. Calendar\n<br>\n2. Calendar bucket\n<br>\n3. Item distribution\n<br>\n4. Item supplier\n<br>\nCreate the field on your own to ensure the Frepple Planning Algorithm is fully configured.",
+   "read_only": 1
+  },
+  {
+   "default": "\n<br>\n",
+   "fieldname": "small_text_1",
+   "fieldtype": "HTML",
+   "label": "Action Bar",
+   "options": "\n<br>\n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break",
+   "label": "Notice"
+  },
+  {
+   "bold": 1,
+   "fieldname": "frepple_demand_section",
+   "fieldtype": "Section Break",
+   "label": "Frepple Demand"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "frepple_demand",
+   "fieldtype": "Check",
+   "label": "Frepple Demand"
+  },
+  {
+   "description": "The following conditions are necessary to satisfy in order to fetch the selected data from ERPNext:",
+   "fieldname": "rule",
+   "fieldtype": "Section Break",
+   "label": "Fetching Rules"
+  },
+  {
+   "bold": 1,
+   "fieldname": "fetching_rule_1",
+   "fieldtype": "HTML",
+   "label": "Fetching Rule 1",
+   "options": "<br>\n# Frepple Demand: <br>\n- Sales Order in 'Selling' must not be \"Canceled\" or \"Closed\"\n<br><br>\n# Frepple Item: <br>\n- Item status in 'Stock' must be \"Enabled\"\n<br><br>\n# Frepple Customer: <br>\n- Customer status must be \"Enabled\"\n<br><br>\n# Frepple Location: <br>\n- Warehouse status in 'Stock' must be \"Enabled\"\n<br><br>\n# Frepple Buffer: <br>\n- Item status in 'Bin List' must be \"Enabled\"\n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fetching_rule_2",
+   "fieldtype": "HTML",
+   "label": "Fetching Rule 2",
+   "options": "<br>\n# Frepple Resource: <br>\n- Resource Disable button in 'HR' must not be checked\n<br><br>\n# Frepple Skill: <br>\n- Skill status in 'Skill List' must be \"Enabled\"\n<br><br>\n# Frepple Resource Skill: <br>\n- Skill status in 'Employee Skill Map' must be \"Enabled\" \n<br><br>\n# Frepple Supplier: <br>\n- Supplier status in 'Buying' must be \"Enabled\"\n<br><br>\n# Frepple Manufacturing: <br>\n- BOM in 'Manufacturing' must be \"Active\" and  \"Default\""
+  }
+ ],
+ "issingle": 1,
+ "modified": "2022-07-25 21:21:33.466489",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Integration Data Fetching",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

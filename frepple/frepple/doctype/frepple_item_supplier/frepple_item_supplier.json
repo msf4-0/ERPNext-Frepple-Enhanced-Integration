@@ -1,0 +1,188 @@
+{
+ "autoname": "format:{item} By {supplier}",
+ "creation": "2022-01-26 13:18:48.110700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "supplier",
+  "location_frepple_itemsupplier",
+  "column_break_4",
+  "description",
+  "supplier_cost",
+  "section_break_7",
+  "sizemin_fepple_itemsupplier",
+  "sizemulti_fepple_itemsupplier",
+  "column_break_9",
+  "sizemax_fepple_itemsupplier",
+  "lead_time_section",
+  "day",
+  "column_break_6",
+  "time",
+  "batch_win_section",
+  "day1",
+  "column_break_18",
+  "time1",
+  "section_break_8",
+  "resource",
+  "column_break_22",
+  "resource_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Frepple Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Frepple Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_cost",
+   "fieldtype": "Float",
+   "label": "Supplier Cost"
+  },
+  {
+   "description": "Delivery Time needed",
+   "fieldname": "lead_time_section",
+   "fieldtype": "Section Break",
+   "label": "Lead time"
+  },
+  {
+   "default": "0",
+   "fieldname": "day",
+   "fieldtype": "Int",
+   "label": "Day"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fetch_from": "item.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "description": "The name of the location where the supplier can be used to purchase this item",
+   "fieldname": "location_frepple_itemsupplier",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Frepple Location"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "description": "A minimum purchasing quantity",
+   "fieldname": "sizemin_fepple_itemsupplier",
+   "fieldtype": "Float",
+   "label": "Size Minimum"
+  },
+  {
+   "default": "1",
+   "description": "A multiple purchasing quantity",
+   "fieldname": "sizemulti_fepple_itemsupplier",
+   "fieldtype": "Float",
+   "label": "Size Multiple"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "A maximum purchasing quantity",
+   "fieldname": "sizemax_fepple_itemsupplier",
+   "fieldtype": "Float",
+   "label": "Size Maximum"
+  },
+  {
+   "description": "Proposed purchase orders within this window will be grouped together",
+   "fieldname": "batch_win_section",
+   "fieldtype": "Section Break",
+   "label": "Batching window"
+  },
+  {
+   "default": "0",
+   "fieldname": "day1",
+   "fieldtype": "Int",
+   "label": "Day"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "time1",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "resource",
+   "fieldtype": "Link",
+   "label": "Resource",
+   "options": "Frepple Resource"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "resource_quantity",
+   "fieldtype": "Int",
+   "label": "Resource Quantity"
+  }
+ ],
+ "modified": "2022-07-20 16:43:08.090631",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Item Supplier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
