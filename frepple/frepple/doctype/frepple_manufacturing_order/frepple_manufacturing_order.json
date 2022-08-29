@@ -1,0 +1,162 @@
+{
+ "autoname": "field:reference",
+ "creation": "2022-01-27 23:00:00.988145",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "operation",
+  "status",
+  "column_break_7",
+  "quantity",
+  "completed_quantity",
+  "latest_reference",
+  "manufacture_time_section",
+  "start_date",
+  "column_break_8",
+  "end_date",
+  "section_break_10",
+  "demand",
+  "column_break_9",
+  "erpnext_wo", 
+  "section_break_11",
+  "resource",
+  "section_break_12",
+  "material"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Correspond to BOM in ERPNext",
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operation",
+   "options": "Frepple Operation"
+  },
+  {
+   "description": "Item to manufacture",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "proposed\napproved\nconfirmed\ncompleted\nclosed"
+  },
+  {
+   "fieldname": "completed_quantity",
+   "fieldtype": "Float",
+   "label": "Completed Quantity"
+  },
+  {
+   "fieldname": "manufacture_time_section",
+   "fieldtype": "Section Break",
+   "label": "Manufacture time"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+    "fieldname": "column_break_7",
+    "fieldtype": "Column Break"
+   },
+  {
+    "fieldname": "column_break_9",
+    "fieldtype": "Column Break"
+   },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+    "fieldname": "section_break_11",
+    "fieldtype": "Section Break"
+   },
+  {
+    "fieldname": "section_break_12",
+    "fieldtype": "Section Break"
+   },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "erpnext_wo",
+   "fieldtype": "Link",
+   "label": "ERPNext Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "demand",
+   "fieldtype": "Link",
+   "label": "Demand",
+   "options": "Frepple Demand"
+  },
+  {
+   "description": "Reference that match the manufacturing order on Frepple side.",
+   "fieldname": "latest_reference",
+   "fieldtype": "Data",
+   "label": "Latest reference"
+  },
+  {
+    "fieldname": "resource",
+    "fieldtype": "Table",
+    "label": "Allocated Resource",
+    "oldfieldname": "frepple_manufacturing_order_resource",
+    "oldfieldtype": "Table",
+    "options": "Frepple Manufacturing Order Resource"
+   },
+   {
+    "fieldname": "material",
+    "fieldtype": "Table",
+    "label": "Materials",
+    "oldfieldname": "frepple_manufacturing_order_material",
+    "oldfieldtype": "Table",
+    "options": "Frepple Manufacturing Order Material"
+   }
+ ],
+ "modified": "2022-07-19 13:00:22.073271",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Manufacturing Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,43 @@
+{
+ "creation": "2022-07-18 14:50:49",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "resource",
+  "resource_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Resource",
+   "options": "Frepple Resource",
+   "width": "2"
+  },
+  {
+   "fieldname": "resource_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Resource Quantity",
+   "width": "1"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  }
+ ],
+ "idx": 1,
+ "istable": 1,
+ "modified": "2022-07-19 23:55:48.557292",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Manufacturing Order Resource",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

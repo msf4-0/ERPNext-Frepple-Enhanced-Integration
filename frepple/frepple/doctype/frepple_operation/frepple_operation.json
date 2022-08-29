@@ -1,0 +1,176 @@
+{
+ "autoname": "field:operation_temp",
+ "creation": "2022-01-26 13:32:10.080554",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "operation",
+  "operation_routing",
+  "item",
+  "available_frepple_operation",
+  "column_break_4",
+  "location",
+  "operation_owner",
+  "priority",
+  "section_break_8",
+  "duration_per_unit",
+  "column_break_10",
+  "duration",
+  "section_break_12",
+  "sizemin_fepple_operation",
+  "sizemulti_fepple_operation",
+  "column_break_14",
+  "sizemax_fepple_operation",
+  "operation_temp"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.type == 'fixed_time' || doc.type == 'time_per' || doc.type == 'alternate' || doc.type == 'split'",
+   "description": "Select one from the operation list",
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operation",
+   "options": "Operation",
+   "unique": 1
+  },
+  {
+   "description": "Item produced by this operation. \nRecommended to fill this field for operation type \"routing\"",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Frepple Item"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Frepple Location",
+   "reqd": 1
+  },
+  {
+   "default": "time_per",
+   "description": "Let BOM as routing type and the operation as time_per type",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "fixed_time\nrouting\ntime_per\nalternate\nsplit"
+  },
+  {
+   "default": "00:00:00",
+   "depends_on": "eval:(doc.type==\"time_per\")",
+   "fieldname": "duration_per_unit",
+   "fieldtype": "Time",
+   "label": "Duration per unit"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "duration",
+   "fieldtype": "Time",
+   "label": "Duration"
+  },
+  {
+   "description": "BOM of the operations. Owner should be a operation with \"routing type\"",
+   "fieldname": "operation_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Frepple Operation"
+  },
+  {
+   "default": "1",
+   "description": "Define the order of operation in a routing. First operation start with 1.",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Priority"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "A minimum production quantity",
+   "fieldname": "sizemin_fepple_operation",
+   "fieldtype": "Float",
+   "label": "Size Minimum"
+  },
+  {
+   "default": "1",
+   "description": "A multiple production quantity",
+   "fieldname": "sizemulti_fepple_operation",
+   "fieldtype": "Float",
+   "label": "Size Multiple"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "A maximum production quantity",
+   "fieldname": "sizemax_fepple_operation",
+   "fieldtype": "Float",
+   "label": "Size Maximum"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "available_frepple_operation",
+   "fieldtype": "Link",
+   "label": "Available",
+   "options": "Frepple Calendar"
+  },
+  {
+   "fieldname": "operation_temp",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Operation Temp",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'routing'",
+   "description": "Select one BOM as a routing operation",
+   "fieldname": "operation_routing",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "BOM"
+  }
+ ],
+ "modified": "2022-07-25 11:42:25.942488",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Operation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

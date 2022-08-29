@@ -1,0 +1,151 @@
+{
+ "creation": "2022-01-28 12:54:51.248266",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "run_the_plan_and_generate_the_result_here",
+  "create_a_plan_section",
+  "plan_type_column",
+  "constraint",
+  "unconstraint",
+  "constraint_column",
+  "capacity",
+  "lead_time",
+  "release_fence",
+  "section_break_9",
+  "run_plan",
+  "update_frepple",
+  "auto_generate_result",
+  "result_section",
+  "manufacturing_orders",
+  "purchase_orders",
+  "distribution_orders",
+  "generate_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "run_the_plan_and_generate_the_result_here",
+   "fieldtype": "Heading",
+   "label": "Run the plan and generate the result here."
+  },
+  {
+   "fieldname": "run_plan",
+   "fieldtype": "Button",
+   "label": "Run Plan"
+  },
+  {
+   "fieldname": "generate_result",
+   "fieldtype": "Button",
+   "label": "Import Plan Result"
+  },
+  {
+   "fieldname": "create_a_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Create a plan"
+  },
+  {
+   "fieldname": "plan_type_column",
+   "fieldtype": "Column Break",
+   "label": "Plan Type"
+  },
+  {
+   "default": "1",
+   "fieldname": "constraint",
+   "fieldtype": "Check",
+   "label": "Constraint"
+  },
+  {
+   "default": "0",
+   "fieldname": "unconstraint",
+   "fieldtype": "Check",
+   "label": "Unconstraint"
+  },
+  {
+   "fieldname": "constraint_column",
+   "fieldtype": "Column Break",
+   "label": "Constraint"
+  },
+  {
+   "default": "1",
+   "fieldname": "capacity",
+   "fieldtype": "Check",
+   "label": "Capacity: respect capacity limits"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Run Frepple Plan"
+  },
+  {
+   "default": "1",
+   "fieldname": "lead_time",
+   "fieldtype": "Check",
+   "label": "Lead time: do not plan in the past"
+  },
+  {
+   "default": "1",
+   "fieldname": "release_fence",
+   "fieldtype": "Check",
+   "label": "Release fence: do not plan within the release time window"
+  },
+  {
+   "description": "Select the result to be imported from Frepple and click \"Import Plan Result\"\n",
+   "fieldname": "result_section",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_frepple",
+   "fieldtype": "Check",
+   "label": "Update demand, manufacturing order and purchase order on frepple side"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_generate_result",
+   "fieldtype": "Check",
+   "label": "Generate result once the plan execution ends",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "manufacturing_orders",
+   "fieldtype": "Check",
+   "label": "Manufacturing orders "
+  },
+  {
+   "default": "0",
+   "fieldname": "purchase_orders",
+   "fieldtype": "Check",
+   "label": "Purchase orders"
+  },
+  {
+   "default": "0",
+   "fieldname": "distribution_orders",
+   "fieldtype": "Check",
+   "label": "Distribution orders "
+  }
+ ],
+ "issingle": 1,
+ "modified": "2022-07-21 10:44:18.164297",
+ "modified_by": "Administrator",
+ "module": "Frepple",
+ "name": "Frepple Run Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
