@@ -20,10 +20,6 @@
 Frepple Custom App built based on Frepple Advanced Planning and Scheduling software. It was built to integrate with ERPNext, act as a connector (middle station) that allow bidirectional data transfer between Frepple software and ERPNext. It is also used to map the data type between Frepple software and ERPNext since both software do not use the same data structure and format.
 
 
-## Prerequisite
-1. Installed the Frepple and successfully launched it on the localhost. Refer to [this document](https://docs.google.com/document/d/1P4U1rZszydwy2LmVAuC4lvYPl-dFw86LSC8Fz8zRsIE/edit?usp=sharing) for installing Frepple software.
-2. Installed the ERPNext and successfully launched it on the localhost. Refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app.
-
 ## The App Contains
 1. All necessary Frepple software menus for production planning process.
 <img width="865" alt="Frepple_doctype_pages" src="https://user-images.githubusercontent.com/108999556/188206023-0df12d25-06fa-43c3-af86-1a7059592e7b.png">
@@ -49,18 +45,42 @@ Frepple Custom App built based on Frepple Advanced Planning and Scheduling softw
 8. Sync the status of work orders and purchase orders between ERPNext and Frepple.
 
 ## Installation
-In order to install this integrated app into your ERPNext system, two major process must be done. These two process are described as following:
+
+### Prerequisite
+1. Installed Frepple software and successfully launched it on the localhost. Refer to [this document](https://docs.google.com/document/d/1P4U1rZszydwy2LmVAuC4lvYPl-dFw86LSC8Fz8zRsIE/edit?usp=sharing) for installing Frepple software.
+2. Installed ERPNext and successfully launched it on the localhost.
+
+Note: 
+- If you still have not installed ERPNext in your PC, skip the below instalation and refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app at once.
+- If you already have a running instance of ERPNext, you will only need to install the new app .In order to install this integrated app into your ERPNext system, two major process must be done. These two process are described in the following section.
 
 ### I. Update ERPNext files
 This is an important step where some of ERPNext files must be updated to accumodate the new version of Frepple custom app. To uodate these files, follow the instructions below:
 1. Create a folder.
 
 2. Open a Powershell terminal, navigate to the newly created folder.
-3. Clone this repo.
-    - `git clone https://`
+
+3. Clone this repo:
+> git clone https://github.com/msf4-0/ERPNext-Update-Files.git
+
+4. Navigate to the cloned folder:
+> cd ERPNext-Update-Files
+
+5. Open the following text file [Execution_Commands.txt](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/files/9480590/Execution_Commands.txt) and run all the commands one-by-one to ensure all files are copied into their distination.
+
+6. After all files have been copied, login to <project_name>-erpnext-python-1 container. Use the following command to login into this container as a root user:
+> docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash 
+- For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`.
+
+7. Once you login in into `<project_name>-erpnext-python-1` container, by default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
+> cd ...
+
+8. Update the new files into the system by running this command:
+> bench --site <site_name> migrate.
+- For example, `bench --site custom-erpnext-nginx migrate`.
 
 
-### II. Install the new Frepple custom app into ERPNext:
+### II. Install the new Frepple custom app into ERPNext
 1. Navigate to the bench directory by loging to <project_name>-erpnext-python-1 container. Run the folloing command:
 > docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash
 - For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`
