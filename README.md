@@ -54,6 +54,8 @@ Note:
 - If you still have not installed ERPNext in your PC, skip the below instalation and refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app at once.
 - If you already have a running instance of ERPNext, you will only need to install the new app .In order to install this integrated app into your ERPNext system, two major process must be done. These two process are described in the following section.
 
+
+
 ### I. Update ERPNext files
 This is an important step where some of ERPNext files must be updated to accumodate the new version of Frepple custom app. To uodate these files, follow the instructions below:
 1. Create a folder.
@@ -78,6 +80,7 @@ This is an important step where some of ERPNext files must be updated to accumod
 8. Update the new files into the system by running this command:
 > bench --site <site_name> migrate.
 - For example, `bench --site custom-erpnext-nginx migrate`.
+
 
 
 ### II. Install the new Frepple custom app into ERPNext
