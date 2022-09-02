@@ -54,7 +54,7 @@ Note:
 - If you still have not installed ERPNext in your PC, skip the below installation and refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app at once.
 - If you already have a running instance of ERPNext, you will only need to install the new app. In order to install this integrated app into your ERPNext system, two main processes must be done. These two process are described in the following section.
 
-</a>
+
 ### I. Update ERPNext files
 This is an important step where some of ERPNext files must be updated to accumodate the new version of Frepple custom app. To uodate these files, follow the instructions below:
 1. Create a folder.
@@ -80,7 +80,7 @@ This is an important step where some of ERPNext files must be updated to accumod
 > bench --site <site_name> migrate.
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
-</a>
+
 ### II. Install the new Frepple custom app into ERPNext
 1. Navigate to the bench directory by loging to <project_name>-erpnext-python-1 container. Run the folloing command:
 > docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash
@@ -99,7 +99,7 @@ This is an important step where some of ERPNext files must be updated to accumod
 5. Run bench start:
 > bench start
 
-</a>
+
 ## Frepple settings configuration
 Before starting using Frepple custom app, you are required to set up certain information to enable the integration between ERPNext and Frepple.
 Go to `Settings > Frepple Settings`.
@@ -120,7 +120,7 @@ Go to `Settings > Frepple Settings`.
 - Secret key:
 > Key is required for iframe embedded to render the Frepple page. Can be found under `etc/frepple/djangosettings.py` file.
 
-</a>
+
 ## Important Note
 Frepple custom app does not perform any data validation when the data are exported to Frepple software. The user must have basic knowledge of Frepple to ensure the data provided are sufficient to generate the plan in Frepple. A quick debug step is to verify the supply path matches the product structure. Remember to set up item supplier for the raw material.
 
