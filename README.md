@@ -25,35 +25,61 @@ Frepple Custom App built based on Frepple Advanced Planning and Scheduling softw
 2. Installed the ERPNext and successfully launched it on the localhost. Refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app.
 
 ## The App Contains
-1. Import data from ERPNext to Frepple custom app with few clicks.
-<img width="857" alt="WeChat Screenshot_20220217113754" src="https://user-images.githubusercontent.com/53387856/154400564-0aa408c7-cae6-431e-be03-fe6451e6b87a.png">
+1. All necessary Frepple software menus for production planning process.
+<img width="865" alt="Frepple_doctype_pages" src="https://user-images.githubusercontent.com/108999556/188206023-0df12d25-06fa-43c3-af86-1a7059592e7b.png">
 
-2. Generate the plan in Frepple custom app itself, with configurable constraints.
-<img width="865" alt="Frepple run plan page" src="https://user-images.githubusercontent.com/53387856/154400669-c4beafb0-181b-440f-a73e-4c8e69e2ce04.png">
+2. Import data from ERPNext to Frepple custom app with few clicks.
+<img width="865" alt="Data_fetching_page" src="https://user-images.githubusercontent.com/108999556/188206235-815fd6ef-f54f-4678-b052-2c2c0c2c81d6.png">
 
-3. Import manufacturing orders, purchase orders and distribution orders from Frepple software to ERPNext.
-<img width="872" alt="Frepple manufacturing order " src="https://user-images.githubusercontent.com/53387856/154401045-4a6ad63b-5583-41ee-b092-f5de0295698c.png">
+3. Export data from Frepple custom app to Frepple software with few clicks.
+<img width="865" alt="Data_export_page" src="https://user-images.githubusercontent.com/108999556/188206361-1324c458-aa6c-4ddc-b503-6ce8536ef112.png">
 
-4. Embed Frepple page into ERPNext user interface using iframe. Access the frepple screens through `Frepple Custom Page`.
-<img width="854" alt="Frepple custom page" src="https://user-images.githubusercontent.com/53387856/154400895-02414e51-bdbf-4c38-9861-98dbfd6eb425.png">
+4. Generate the plan in Frepple custom app itself, with configurable constraints.
+<img width="865" alt="Run_plan_page" src="https://user-images.githubusercontent.com/108999556/188206576-f1f16437-abb8-4f29-858d-6734bcc3929a.png">
 
-5. Sync the status of work orders and purchase orders between ERPNext and Frepple.
+5. Import manufacturing orders, purchase orders and distribution orders from Frepple software to ERPNext.
+<img width="865" alt="Result_page" src="https://user-images.githubusercontent.com/108999556/188206692-c054bb55-0b29-44f5-958f-f091f3d3f9d5.png">
 
-## Usage
-### 1. Installation
-Navigate to the bench directory and run the following command:
-> bench get-app frepple https://github.com/msf4-0/ERPNext-Frepple-Integration.git
+6. Embed Frepple page into ERPNext user interface using iframe. Access the frepple screens through `Frepple Custom Page`.
+<img width="865" alt="Frepple custom page" src="https://user-images.githubusercontent.com/53387856/154400895-02414e51-bdbf-4c38-9861-98dbfd6eb425.png">
 
-Install the app onto your site.
-> bench --site [your.site.name] install-app frepple
+7. Generate work orders and purchase orders in ERPNext based on the result from Frepple.
+<img width="865" alt="Frepple manufacturing order " src="https://user-images.githubusercontent.com/53387856/154401045-4a6ad63b-5583-41ee-b092-f5de0295698c.png">
 
-Bench start
+8. Sync the status of work orders and purchase orders between ERPNext and Frepple.
+
+## Installation
+In order to install this integrated app into your ERPNext system, two major process must be done. These two process are described as following:
+
+### I. Update ERPNext files
+This is an important step where some of ERPNext files must be updated to accumodate the new version of Frepple custom app. To uodate these files, follow the instructions below:
+1. Create a folder.
+
+2. Open a Powershell terminal, navigate to the newly created folder.
+3. Clone this repo.
+    - `git clone https://`
+
+
+### II. Install the new Frepple custom app into ERPNext:
+1. Navigate to the bench directory by loging to <project_name>-erpnext-python-1 container. Run the folloing command:
+> docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash
+- For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`
+
+2. By default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
+> cd ..
+
+3. Run the following command:
+> bench get-app frepple https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git
+
+4. Install the app onto your site.
+> bench --site <your.site.name> install-app frepple
+- For example, `bench --site custom-erpnext-nginx install-app frepple`
+
+5. Run bench start:
 > bench start
 
-The Frepple custom app main page.
-<img width="866" alt="Frepple module main page" src="https://user-images.githubusercontent.com/53387856/154392630-7c1c2522-e0b6-4af4-8c82-a793c5fb65d5.png">
 
-### 2. Frepple settings configuration
+## Frepple settings configuration
 Before starting using Frepple custom app, you are required to set up certain information to enable the integration between ERPNext and Frepple.
 Go to `Settings > Frepple Settings`.
 
