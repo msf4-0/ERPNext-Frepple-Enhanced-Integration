@@ -84,7 +84,7 @@ This is an important step where some of ERPNext files must be updated to accumod
 > cd ...
 
 8. Update the new files into the system by running this command:
-> bench --site <site_name> migrate.
+> bench --site <site_name> migrate
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
 9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
@@ -132,7 +132,7 @@ The following steps are only applicable if you have installed ERPNext with the p
 > cd ...
 
 8. Update the new app into the system by running this command:
-> bench --site <site_name> migrate.
+> bench --site <site_name> migrate
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
 9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
