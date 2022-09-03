@@ -73,44 +73,55 @@ This is an important step where some of ERPNext files must be updated to accumod
 2. Open a Powershell terminal, navigate to the newly created folder.
 
 3. Clone this repo:
+
 `git clone https://github.com/msf4-0/ERPNext-Update-Files.git`
 
 4. Navigate to the cloned folder:
-`cd ERPNext-Update-Files`
+
+    `cd ERPNext-Update-Files`
 
 5. Open the following text file [Execution_Commands.txt](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/files/9482662/Execution_Commands.txt) and run all the commands one-by-one to ensure all files are copied into their destination.
 
 6. After all files have been copied, login to <project_name>-erpnext-python-1 container. Use the following command to login into this container as a root user:
-`docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
+
+    `docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
 - For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`.
 
 7. Once you login in into `<project_name>-erpnext-python-1` container, by default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
-`cd ...`
+
+    `cd ...`
 
 8. Update the new files into the system by running this command:
-`bench --site <site_name> migrate`
+
+    `bench --site <site_name> migrate`
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
 9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
-`exit`
+
+    `exit`
 
 ### II. Install the new Frepple custom app into ERPNext
 1. Navigate to the bench directory by loging to <project_name>-erpnext-python-1 container. Run the folloing command:
-`docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
+
+    `docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
 - For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`
 
 2. By default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
-`cd ..`
+
+    `cd ..`
 
 3. Run the following command:
-`bench get-app frepple https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git`
+
+    `bench get-app frepple https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git`
 
 4. Install the app onto your site.
-`bench --site <your.site.name> install-app frepple`
+
+    `bench --site <your.site.name> install-app frepple`
 - For example, `bench --site custom-erpnext-nginx install-app frepple`
 
 5. Run bench start:
-`bench start`
+
+    `bench start`
 
 
 ### III. Update Frepple custom app
@@ -121,26 +132,32 @@ The following steps are only applicable if you have installed ERPNext with the p
 2. Open a Powershell terminal, navigate to the newly created folder.
 
 3. Clone this repo:
-`git clone https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git`
+
+    `git clone https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git`
 
 4. Navigate to the cloned folder:
-`cd ERPNext-Frepple-Enhanced-Integration`
+
+    `cd ERPNext-Frepple-Enhanced-Integration`
 
 5. Open the following text file [Frepple_Execution_Commands.txt](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/files/9482673/Frepple_Execution_Commands.txt) and run the two commands one-by-one to ensure both files are copied into their destination.
 
 6. Login to <project_name>-erpnext-python-1 container. Use the following command to login into this container as a root user:
-`docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
+
+    `docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash`
 - For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`.
 
 7. Once you login in into `<project_name>-erpnext-python-1` container, by default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
-`cd ...`
+
+    `cd ...`
 
 8. Update the new app into the system by running this command:
-`bench --site <site_name> migrate`
+
+    `bench --site <site_name> migrate`
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
 9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
-`exit`
+
+    `exit`
 
 ## Frepple settings configuration
 Before starting using Frepple custom app, you are required to set up certain information to enable the integration between ERPNext and Frepple.
