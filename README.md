@@ -42,6 +42,10 @@ Frepple Custom App built based on Frepple Advanced Planning and Scheduling softw
 7. Generate work orders and purchase orders in ERPNext based on the result from Frepple.
 <img width="865" alt="Frepple manufacturing order " src="https://user-images.githubusercontent.com/53387856/154401045-4a6ad63b-5583-41ee-b092-f5de0295698c.png">
 
+9. Delete all or selected data from Frepple Custom App with few clicks. This enable an easy way to import new plan elements and results.
+<img width="865" alt="Frepple empty data" src="https://user-images.githubusercontent.com/108999556/188288054-665f3f80-c4a0-4c94-b22d-8443da08f830.png">
+![image]()
+
 8. Sync the status of work orders and purchase orders between ERPNext and Frepple.
 
 ## Installation
