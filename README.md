@@ -54,17 +54,17 @@ Frepple Custom App built based on Frepple Advanced Planning and Scheduling softw
 - If you still have not installed ERPNext in your PC:
     - Skip the below installation and refer to [this github repository](https://github.com/msf4-0/IRPS-Enhanced-Frepple-Integration) to install ERPNext with Frepple integration app at once.
 - If you already have installed ERPNext which has the old version of ERPNext-Frepple integration, you will need to:
-    - First, update ERPNext files described in section [I. Update ERPNext files](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#i-update-erpnext-files)
-    - Second, update Frepple custom app into the new version by following the instruction in section [III. Update Frepple custom app](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/edit/main/README.md#iii-update-frepple-custom-app)
+    - First, update ERPNext files described in section [I. Update ERPNext files](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#i-update-erpnext-files).
+    - Second, update Frepple custom app into the new version by following the instruction in section [III. Update Frepple custom app](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/edit/main/README.md#iii-update-frepple-custom-app).
 - If you already have a running instance of ERPNext that does not have the Frepple integrated app, you will need to: 
-    - First, update ERPNext files described in section [I. Update ERPNext files](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#i-update-erpnext-files)
+    - First, update ERPNext files described in section [I. Update ERPNext files](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#i-update-erpnext-files).
     - Second, install the new Frepple custom app by following the steps illustrated in section [II. Install the new Frepple custom app into ERPNext](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#ii-install-the-new-frepple-custom-app-into-erpnext).
     
 
 
 ### I. Update ERPNext files
 This is an important step where some of ERPNext files must be updated to accumodate the new version of Frepple custom app. To uodate these files, follow the instructions below:
-1. Create a folder.
+1. Create a new folder.
 
 2. Open a Powershell terminal, navigate to the newly created folder.
 
@@ -87,6 +87,8 @@ This is an important step where some of ERPNext files must be updated to accumod
 > bench --site <site_name> migrate.
 - For example, `bench --site custom-erpnext-nginx migrate`.
 
+9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
+> exit
 
 ### II. Install the new Frepple custom app into ERPNext
 1. Navigate to the bench directory by loging to <project_name>-erpnext-python-1 container. Run the folloing command:
@@ -108,6 +110,33 @@ This is an important step where some of ERPNext files must be updated to accumod
 
 
 ### III. Update Frepple custom app
+The following steps are only applicable if you have installed ERPNext with the previous Frepple integrated app. Please skip this section if you already done both, [I. Update ERPNext files](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#i-update-erpnext-files) and [II. Install the new Frepple custom app into ERPNext](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration#ii-install-the-new-frepple-custom-app-into-erpnext).
+
+1. Create a new folder.
+
+2. Open a Powershell terminal, navigate to the newly created folder.
+
+3. Clone this repo:
+> git clone https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration.git
+
+4. Navigate to the cloned folder:
+> cd ERPNext-Frepple-Enhanced-Integration
+
+5. Open the following text file [Frepple_Execution_Commands.txt](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/files/9482673/Frepple_Execution_Commands.txt) and run the two commands one-by-one to ensure both files are copied into their destination.
+
+6. Login to <project_name>-erpnext-python-1 container. Use the following command to login into this container as a root user:
+> docker exec -it --user root <project_name>-erpnext-python-1 /bin/bash 
+- For example, `docker exec -it --user root project1-erpnext-python-1 /bin/bash`.
+
+7. Once you login in into `<project_name>-erpnext-python-1` container, by default, you will be in `~:/home/frappe/frappe-bench/sites` directory. Navigate out to `~:/home/frappe/frappe-bench` directory by typing:
+> cd ...
+
+8. Update the new app into the system by running this command:
+> bench --site <site_name> migrate.
+- For example, `bench --site custom-erpnext-nginx migrate`.
+
+9. After the process `Compiling Python files...` is finished, you will be back in the `~:/home/frappe/frappe-bench` directory. This means the `bench migrate` process is completed. To exit from `<project_name>-erpnext-python-1` container run:
+> exit
 
 ## Frepple settings configuration
 Before starting using Frepple custom app, you are required to set up certain information to enable the integration between ERPNext and Frepple.
