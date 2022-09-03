@@ -17,7 +17,7 @@
 
 
 ## [Frepple](https://github.com/frePPLe/frepple) integration for [Frappe web framework](https://github.com/frappe/frappe)
-Frepple Custom App built based on Frepple Advanced Planning and Scheduling software. It was built to integrate with ERPNext, act as a connector (middle station) that allow bidirectional data transfer between Frepple software and ERPNext. It is also used to map the data type between Frepple software and ERPNext since both software do not use the same data structure and format.
+Frepple Custom App built based on Frepple Advanced Planning and Scheduling software. It was built to integrate with ERPNext, act as a connector (middle station) that allow bidirectional data transfer between Frepple software and ERPNext. It is also used to map the data type between Frepple software and ERPNext since both software do not use the same data structure and format. Refer to [the Wiki section in this repository](https://github.com/msf4-0/ERPNext-Frepple-Enhanced-Integration/wiki) to view the data mapping in this custom app.
 
 
 ## The App Contains
