@@ -74,7 +74,7 @@ This is an important step where some of ERPNext files must be updated to accumod
 
 3. Clone this repo:
 
-`git clone https://github.com/msf4-0/ERPNext-Update-Files.git`
+    `git clone https://github.com/msf4-0/ERPNext-Update-Files.git`
 
 4. Navigate to the cloned folder:
 
