@@ -11,7 +11,7 @@ setup(
 	name="frepple",
 	version=version,
 	description="Enhanced integration between ERPNext and Frepple",
-	author="Mohammed Taha","Drayang Chua",
+	author="Drayang Chua","Mohammed Taha",
 	author_email="dchu0011@student.monash.edu","motahahaddar@gmail.com",
 	packages=find_packages(),
 	zip_safe=False,
